@@ -140,6 +140,10 @@
     <Compile Include="Models\CustomerServices\Interfaces\ICustomerService.cs" />
     <Compile Include="Models\Customers\Customer.cs" />
     <Compile Include="Models\Customers\Interfaces\ICustomer.cs" />
+    <Compile Include="Models\dto\BankAccountRequest.cs" />
+    <Compile Include="Models\dto\CustomerRequest.cs" />
+    <Compile Include="Models\dto\ICustomerRequest.cs" />
+    <Compile Include="Models\dto\IBankAccountRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,7 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\dto\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

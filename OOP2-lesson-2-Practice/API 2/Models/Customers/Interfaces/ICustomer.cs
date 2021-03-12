@@ -11,6 +11,6 @@ namespace BankAPI.Models.Customers.Interfaces
         int Id { get; }
         string FirstName { get; }
         string LastName { get; }
-        int SocialSecurityNumber { get; }
+        string SocialSecurityNumber { get; }
     }
 }
