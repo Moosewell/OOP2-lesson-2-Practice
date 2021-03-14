@@ -21,9 +21,13 @@ namespace BankAPI.Models.BankAccountServices
             ListOfBankAccounts.Add(new BankAccount(5, "SparKonto", ListOfBankAccounts));
         }
 
-        public void CreateBankAccount(BankAccountRequest bankAccountRequest)
+        public void CreateBankAccount(IBankAccountRequest bankAccountRequest)
         {
             ListOfBankAccounts.Add(new BankAccount(bankAccountRequest, ListOfBankAccounts));
+        }
+        public List<IBankAccount> GetBankAccountList()
+        {
+            return ListOfBankAccounts;
         }
         public void Withdraw(float amount, IBankAccount bankAccount)
         {

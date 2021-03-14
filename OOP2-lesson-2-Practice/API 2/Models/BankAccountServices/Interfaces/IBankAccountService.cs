@@ -11,7 +11,8 @@ namespace BankAPI.Models.BankAccountServices.Interfaces
 {
     public interface IBankAccountService
     {
-        void CreateBankAccount(BankAccountRequest bankAccountRequest);
+        void CreateBankAccount(IBankAccountRequest bankAccountRequest);
+        List<IBankAccount> GetBankAccountList();
         void Withdraw(float amount, IBankAccount bankAccount);
         void Deposit(float amount, IBankAccount bankAccount);
         bool BalanceToLowForWithdrawl(float amount, IBankAccount bankAccount);

@@ -12,8 +12,8 @@ namespace BankAPI.Models.CustomerServices.Interfaces
 {
     public interface ICustomerService
     {
-        void CreateCustomer(CustomerRequest customerRequest);
+        void CreateCustomer(ICustomerRequest customerRequest);
         List<ICustomer> GetCustomerList();
-        List<IBankAccount> GetCustomerBankAccounts(ICustomer customer, List<IBankAccount> listOfBankAccounts);
+        List<IBankAccount> GetCustomerBankAccounts(int customerID, List<IBankAccount> listOfBankAccounts);
     }
 }

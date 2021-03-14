@@ -20,7 +20,7 @@ namespace BankAPI.Models.CustomerServices
             ListOfCustomers.Add(new Customer("Carina", "Melander", "6704171255", ListOfCustomers));
             ListOfCustomers.Add(new Customer("Jan", "Melander", "6901119451", ListOfCustomers));
         }
-        public void CreateCustomer(CustomerRequest customerRequest)
+        public void CreateCustomer(ICustomerRequest customerRequest)
         {
             Customer newCustomer = new Customer(customerRequest, ListOfCustomers);
         }
@@ -28,9 +28,9 @@ namespace BankAPI.Models.CustomerServices
         {
             return ListOfCustomers;
         }
-        public List<IBankAccount> GetCustomerBankAccounts(ICustomer customer, List<IBankAccount> listOfBankAccounts)
+        public List<IBankAccount> GetCustomerBankAccounts(int customerID, List<IBankAccount> listOfBankAccounts)
         {
-            return listOfBankAccounts.Where(o => o.CustomerId == customer.Id).ToList();
+            return listOfBankAccounts.Where(o => o.CustomerId == customerID).ToList();
         }
 
         List<ICustomer> ListOfCustomers = new List<ICustomer>();

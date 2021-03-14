@@ -2,30 +2,118 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1 style=" text-align:center">BANK CLIENT</h1>
+    <p class="lead"></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <h2 style="font-size: 27px">Create Customer</h2>
+        <form>
+            <div>
+                <label for="firstName">First Name:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 5px" type="text" id="firstName" name="firstName" required minlenght="2" maxlength="12" size="14">
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 5px" type="text" id="lastName" name="lastName" required minlenght="2" maxlength="12" size="14">
+            </div>
+            <div>
+                <label for="socialSecurityNumber">Social Secutity Number:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 15px" type="text" id="socialSequrityNumber" name="socialSequrityNumber" required minlenght="10" maxlength="10" size="12">
+            </div>
+
+            <button>Create</button>
+        </form>
     </div>
+
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2 style="font-size: 27px">Create Bank Account</h2>
+        <form>
+            <div>
+                <label for="customerId">Customer ID:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 5px" type="number" id="customerId" name="customerId" required minlenght="1" maxlength="10" size="12">
+            </div>
+            <div>
+                <label for="accountName">Account Name:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 15px" type="text" id="accountName" name="accountName" required minlenght="4" maxlength="20" size="22">
+            </div>
+
+            <button style="margin-bottom: 100px">Create</button>
+        </form>
     </div>
+
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2 style="font-size: 27px">Get Customer Bank Accounts</h2>
+        <form>
+            <div>
+                <label for="customerId">Customer ID:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 15px" type="number" id="customerId" name="customerId" required minlenght="1" maxlength="10" size="12">
+            </div>
+
+            <button style="margin-bottom: 180px">Get</button>
+        </form>
     </div>
+
+
+    <div class="col-md-4">
+        <h2 style="font-size: 27px">Withdraw</h2>
+        <form>
+            <div>
+                <label for="accountId">Account ID:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 5px" type="number" id="accountId" name="accountId" required minlenght="1" maxlength="10" size="12">
+            </div>
+            <div>
+                <label for="amount">Amount:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 15px" type="number" id="amount" name="amount" required minlenght="1" maxlength="10" size="12">
+            </div>
+
+            <button>Transact</button>
+        </form>
+    </div>
+
+    <div class="col-md-4">
+        <h2 style="font-size: 27px">Deposit</h2>
+        <div>
+            <label for="accountId">Account ID:</label>
+        </div>
+        <div>
+            <input style="margin-bottom: 5px" type="number" id="accountId" name="accountId" required minlenght="1" maxlength="10" size="12">
+        </div>
+        <div>
+            <label for="amount">Amount:</label>
+        </div>
+        <div>
+            <input style="margin-bottom: 15px" type="number" id="amount" name="amount" required minlenght="1" maxlength="10" size="12">
+        </div>
+
+        <button>Transact</button>
+    </div>
+
+    <div class="col-md-4">
+        <h2 style="font-size: 27px">@Html.ActionLink("Get List Of Customers", "GetCustomerList", "Home")</h2>
+    </div>
+
+    <div class="col-md-4">
+        <h2 style="font-size: 27px">@Html.ActionLink("Get List of Bank Accounts", "GetBankAccountList", "Home")</h2>
+    </div>
+
 </div>

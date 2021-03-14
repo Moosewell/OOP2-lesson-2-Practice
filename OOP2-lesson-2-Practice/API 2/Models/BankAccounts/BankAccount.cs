@@ -16,7 +16,7 @@ namespace BankAPI.Models.BankAccounts
             this.accountName = accountName;
             this.balance = 0;
         }
-        public BankAccount(BankAccountRequest bankAccountRequest, List<IBankAccount> bankAccountList)
+        public BankAccount(IBankAccountRequest bankAccountRequest, List<IBankAccount> bankAccountList)
         {
             this.accountId = AutoIncrementId(bankAccountList);
             this.customerId = bankAccountRequest.CustomerId;
@@ -48,12 +48,12 @@ namespace BankAPI.Models.BankAccounts
         private int AutoIncrementId(List<IBankAccount> bankAccountList)
         {
             int ID = 1;
-            for (var i = 0; i < bankAccountList.Count - 1; i++)
+            for (var i = 0; i < bankAccountList.Count; i++)
             {
                 if (bankAccountList[i].AccountId == ID)
                 {
                     ID++;
-                    i = 0;
+                    i = -1;
                 }
             }
             return ID;

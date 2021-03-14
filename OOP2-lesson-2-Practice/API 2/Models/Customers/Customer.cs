@@ -17,7 +17,7 @@ namespace BankAPI.Models.Customers
             this.lastName = lastName;
             this.socialSecurityNumber = socialSecurityNumber;
         }
-        public Customer(CustomerRequest customerRequest, List<ICustomer> customerList)
+        public Customer(ICustomerRequest customerRequest, List<ICustomer> customerList)
         {
             this.id = AutoIncrementID(customerList);
             this.firstName = customerRequest.FirstName;
@@ -40,12 +40,12 @@ namespace BankAPI.Models.Customers
         private int AutoIncrementID(List<ICustomer> customerList)
         {
             int ID = 1;
-            for(var i = 0; i < customerList.Count - 1; i++)
+            for(var i = 0; i < customerList.Count; i++)
             {
                 if (customerList[i].Id == ID)
                 {
                     ID++;
-                    i = 0;
+                    i = -1;
                 }
             }
             return ID;
