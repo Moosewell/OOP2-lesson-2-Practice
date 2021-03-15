@@ -13,8 +13,8 @@ namespace BankAPI.Models.BankAccountServices.Interfaces
     {
         void CreateBankAccount(IBankAccountRequest bankAccountRequest);
         List<IBankAccount> GetBankAccountList();
-        void Withdraw(float amount, IBankAccount bankAccount);
-        void Deposit(float amount, IBankAccount bankAccount);
+        void Withdraw(float amount, int accountId);
+        void Deposit(float amount, int accountId);
         bool BalanceToLowForWithdrawl(float amount, IBankAccount bankAccount);
     }
 }

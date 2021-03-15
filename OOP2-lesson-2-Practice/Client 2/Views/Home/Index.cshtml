@@ -31,7 +31,7 @@
                 <input style="margin-bottom: 15px" type="text" id="socialSequrityNumber" name="socialSequrityNumber" required minlenght="10" maxlength="10" size="12">
             </div>
 
-            <button>Create</button>
+            <input type="submit" value="Create">
         </form>
     </div>
 
@@ -42,7 +42,7 @@
                 <label for="customerId">Customer ID:</label>
             </div>
             <div>
-                <input style="margin-bottom: 5px" type="number" id="customerId" name="customerId" required minlenght="1" maxlength="10" size="12">
+                <input style="margin-bottom: 5px" type="number" min="1" id="customerId" name="customerId" required minlenght="1" maxlength="10" size="12">
             </div>
             <div>
                 <label for="accountName">Account Name:</label>
@@ -51,7 +51,7 @@
                 <input style="margin-bottom: 15px" type="text" id="accountName" name="accountName" required minlenght="4" maxlength="20" size="22">
             </div>
 
-            <button style="margin-bottom: 100px">Create</button>
+            <input type="submit" value="Create" style="margin-bottom: 100px">
         </form>
     </div>
 
@@ -62,10 +62,10 @@
                 <label for="customerId">Customer ID:</label>
             </div>
             <div>
-                <input style="margin-bottom: 15px" type="number" id="customerId" name="customerId" required minlenght="1" maxlength="10" size="12">
+                <input style="margin-bottom: 15px" type="number" min="1" id="customerId" name="customerId" required minlenght="1" maxlength="10" size="12">
             </div>
 
-            <button style="margin-bottom: 180px">Get</button>
+            <input type="submit" value="Get" style="margin-bottom: 180px">
         </form>
     </div>
 
@@ -77,35 +77,37 @@
                 <label for="accountId">Account ID:</label>
             </div>
             <div>
-                <input style="margin-bottom: 5px" type="number" id="accountId" name="accountId" required minlenght="1" maxlength="10" size="12">
+                <input style="margin-bottom: 5px" type="number" min="1" id="accountId" name="accountId" required minlenght="1" maxlength="10" size="12">
             </div>
             <div>
                 <label for="amount">Amount:</label>
             </div>
             <div>
-                <input style="margin-bottom: 15px" type="number" id="amount" name="amount" required minlenght="1" maxlength="10" size="12">
+                <input style="margin-bottom: 15px" type="number" min="0" id="amount" name="amount" required minlenght="1" maxlength="10" size="12">
             </div>
 
-            <button>Transact</button>
+            <input type="submit" value="Transact">
         </form>
     </div>
 
     <div class="col-md-4">
         <h2 style="font-size: 27px">Deposit</h2>
-        <div>
-            <label for="accountId">Account ID:</label>
-        </div>
-        <div>
-            <input style="margin-bottom: 5px" type="number" id="accountId" name="accountId" required minlenght="1" maxlength="10" size="12">
-        </div>
-        <div>
-            <label for="amount">Amount:</label>
-        </div>
-        <div>
-            <input style="margin-bottom: 15px" type="number" id="amount" name="amount" required minlenght="1" maxlength="10" size="12">
-        </div>
+        <form action="Home/Deposit" method="post">
+            <div>
+                <label for="accountId">Account ID:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 5px" type="number" min="1" id="accountId" name="accountId" required minlenght="1" maxlength="10" size="12">
+            </div>
+            <div>
+                <label for="amount">Amount:</label>
+            </div>
+            <div>
+                <input style="margin-bottom: 15px" type="number" min="0" id="amount" name="amount" required minlenght="1" maxlength="10" size="12">
+            </div>
 
-        <button>Transact</button>
+            <input type="submit" value="Transact">
+        </form>
     </div>
 
     <div class="col-md-4">

@@ -1,12 +1,13 @@
-﻿using System;
+﻿using BankClient.Models.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace BankClient.Models.dto
+namespace BankClient.Models
 {
-    public class BankAccountRequest : IBankAccountRequest
+    public class BankAccount : IBankAccount
     {
         public int AccountId { get; set; }
         public int CustomerId { get; set; }

@@ -77,3 +77,5 @@ D:\max\Code\OOP2\OOP2-lesson-2-Practice\OOP2-lesson-2-Practice\Client 2\obj\Debu
 D:\max\Code\OOP2\OOP2-lesson-2-Practice\OOP2-lesson-2-Practice\Client 2\obj\Debug\BankClient.csproj.CopyComplete
 D:\max\Code\OOP2\OOP2-lesson-2-Practice\OOP2-lesson-2-Practice\Client 2\obj\Debug\Client 2.dll
 D:\max\Code\OOP2\OOP2-lesson-2-Practice\OOP2-lesson-2-Practice\Client 2\obj\Debug\Client 2.pdb
+D:\max\Code\OOP2\OOP2-lesson-2-Practice\OOP2-lesson-2-Practice\Client 2\bin\System.Net.Http.Formatting.dll
+D:\max\Code\OOP2\OOP2-lesson-2-Practice\OOP2-lesson-2-Practice\Client 2\bin\System.Net.Http.Formatting.xml

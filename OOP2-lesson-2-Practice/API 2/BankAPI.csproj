@@ -144,6 +144,8 @@
     <Compile Include="Models\dto\CustomerRequest.cs" />
     <Compile Include="Models\dto\ICustomerRequest.cs" />
     <Compile Include="Models\dto\IBankAccountRequest.cs" />
+    <Compile Include="Models\dto\TransactionRequest.cs" />
+    <Compile Include="Models\dto\ITransactionRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,7 @@ using BankAPI.Models.BankAccountServices.Interfaces;
 using BankAPI.Models.BankAccountServices;
 using BankAPI.Models.dto;
 using BankAPI.Models.BankAccounts;
+using Newtonsoft.Json;
 
 namespace BankAPI.Controllers
 {
@@ -37,17 +38,18 @@ namespace BankAPI.Controllers
 
         [HttpGet]
         [Route("api/BankAccountService/Withdraw")]
-        public IHttpActionResult Withdraw(float amount, BankAccount bankAccount)
+        public IHttpActionResult Withdraw(ITransactionRequest transactionRequest)
         {
-            bankAccountService.Withdraw(amount, bankAccount);
+            bankAccountService.Withdraw(transactionRequest.amount, transactionRequest.accountId);
             return Ok();
         }
 
         [HttpGet]
         [Route("api/BankAccountService/Deposit")]
-        public IHttpActionResult Deposit(float amount, BankAccount bankAccount)
+        public IHttpActionResult Deposit(string transactionRequestString)
         {
-            bankAccountService.Deposit(amount, bankAccount);
+            ITransactionRequest transactionRequest = JsonConvert.DeserializeObject<ITransactionRequest>(transactionRequestString);
+            bankAccountService.Deposit(transactionRequest.amount, transactionRequest.accountId);
             return Ok();
         }
 

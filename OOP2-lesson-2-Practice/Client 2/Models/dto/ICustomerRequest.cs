@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankAPI.Models.dto
+namespace BankClient.Models.dto
 {
     public interface ICustomerRequest
     {

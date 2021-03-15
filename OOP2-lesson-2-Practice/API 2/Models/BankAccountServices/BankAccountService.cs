@@ -29,16 +29,18 @@ namespace BankAPI.Models.BankAccountServices
         {
             return ListOfBankAccounts;
         }
-        public void Withdraw(float amount, IBankAccount bankAccount)
+        public void Withdraw(float amount, int accountId)
         {
+            IBankAccount bankAccount = ListOfBankAccounts.Where(o => o.AccountId == accountId).First();
             if (BalanceToLowForWithdrawl(amount, bankAccount))
                 return;
 
             bankAccount.RemoveBalance(amount);
         }
 
-        public void Deposit(float amount, IBankAccount bankAccount)
+        public void Deposit(float amount, int accountId)
         {
+            IBankAccount bankAccount = ListOfBankAccounts.Where(o => o.AccountId == accountId).First();
             bankAccount.AddBalance(amount);
         }
 
